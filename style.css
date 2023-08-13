@@ -6,8 +6,8 @@
 /* hero background image */
 .bgimage {
     height:100vh;
-    background: url('images/heroImage.jpeg');
-    background-size:cover;
+    background: url('images/FullFrame.jpg');
+    background-size: cover;
     position:relative;
 }
 /* text css above hero image*/
@@ -25,6 +25,26 @@
     transform: translate(-50%, -50%);
     color: white;
 }
+/* Style for the transparent button */
+.download-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white; /* Text color */
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 3s, border-color 30s;
+}
+
+/* Hover effect */
+.download-button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-color: black;
+  color: blue;
+}
+
 
 .imageAboutPage{
    width: 100px;
@@ -35,8 +55,9 @@
     padding-top: 4rem;
 } 
 .range{
-    height: 80vh;
+    height: 40vh;
     display: flex;
+    position: relative;
     align-items: stretch;
     justify-content: center;
    /*background : #e3edf7;*/
@@ -54,7 +75,7 @@ position: relative;
     padding: 20px;
     box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
                 -6px -6px 10px -1px rgba(255,255,255,0.7)
-            }
+}
 .inner{
     height: 120px;
     width: 120px;
@@ -72,31 +93,108 @@ position: relative;
 #number{
     font-weight: 600;
     color: #445;
-
-
-
 }
-circle{
+
+#Firstprogress {
     fill: none;
-    stroke: url(#GradientColor);
+    stroke: url(#GradientColorOne);
+    stroke-width: 20px;
+    stroke-dasharray: 440; 
+    stroke-dashoffset: 400;
+    animation: animOne 2s linear forwards;
+}
+
+#Secondprogress{
+    fill: none;
+    stroke: url(#GradientColorTwo);
+    stroke-width: 20px;
+    stroke-dasharray: 440; 
+    stroke-dashoffset: 400;
+    animation: animTwo 2s linear forwards;
+}
+
+#Thirdprogress{
+    fill: none;
+    stroke: url(#GradientColorThree);
+    stroke-width: 20px;
+    stroke-dasharray: 440; 
+    stroke-dashoffset: 400;
+    animation: animThree 2s linear forwards;
+}
+#FourthProgess{
+    fill: none;
+    stroke: url(#GradientColorFour);
+    stroke-width: 20px;
+    stroke-dasharray: 440; 
+    stroke-dashoffset: 400;
+    animation: animFour 2s linear forwards;
+}
+
+#FivthProgess{
+    fill: none;
+    stroke: url(#GradientColorFive);
     stroke-width: 20px;
     stroke-dasharray: 472; 
     stroke-dashoffset: 472;
-    animation: anim 2s linear forwards;
+    animation: animFive 2s linear forwards;
 }
 
+#SixthProgess{
+    fill: none;
+    stroke: url(#GradientColorSix);
+    stroke-width: 20px;
+    stroke-dasharray: 440; 
+    stroke-dashoffset: 400;
+    animation: animSix 2s linear forwards;
+}
+
+
+/*circle{
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 20px;
+    stroke-dasharray: 440; 
+    stroke-dashoffset: 440;
+    animation: anim 2s linear forwards;
+}
+*/
 svg{
-    position: absolute;
+    position:  absolute;
     top: 0;
     left: 0;
 }
 
-@keyframes anim{
+@keyframes animOne{
   100%{
-    stroke-dashoffset: 200; 
+    stroke-dashoffset: 128; 
   }
-
     }
+
+@keyframes animTwo{
+   100%{
+     stroke-dashoffset: 190; 
+        }
+          }
+ @keyframes animThree{
+    100%{
+        stroke-dashoffset: 210; 
+        }
+     }
+ @keyframes animFour{
+    100%{
+        stroke-dashoffset: 80; 
+        }
+      }
+ @keyframes animFive{
+   100%{
+      stroke-dashoffset: 80; 
+     }
+   }
+    @keyframes animSix{
+   100%{
+       stroke-dashoffset: 190; 
+     }
+      }
 
 #contact{
     padding-bottom: 4rem;
@@ -130,17 +228,30 @@ svg{
 
 /* social media icons styling */
 .social-icons {
-    font-size: 36px;
+    font-size: 30px;
     cursor: pointer;
 }
-.fa-facebook:hover,.fa-instagram:hover,.fa-twitter:hover,.fa-linkedin:hover, .fa-twitch:hover {
-    color: #008000;
+
+.fa-facebook:hover{
+    color: #1877F2; 
 }
+.fa-instagram:hover{
+        color: #C13584;
+}
+.fa-twitter:hover{
+    color: #1DA1F2;
+}
+.fa-linkedin:hover{
+    color: #0A66C2;
+}
+.fa-githup:hover{
+    color: dark black;
+}
+
 .fab {
     color: #000000;
 }
 /* footer styling */
 #footer {
-    background-color: #808080;
     text-align: center;
 }
